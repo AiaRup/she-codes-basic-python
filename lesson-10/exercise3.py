@@ -4,4 +4,6 @@ actor = ['Rachel McAdams', 'Angelina Jolie', 'Gal Gadot', 'Natalie Portman', 'Ro
 dict(zip(movie, actor)).items()
 
 result = [f'{m} is played by {a}' for m,a in dict(zip(movie, actor)).items()]
+result2 = [f'{m} is played by {a}' for m,a in { k:v for k,v in zip(movie, actor) }.items()]
 print(result)
+print(result2)
