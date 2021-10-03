@@ -1,22 +1,27 @@
-from random import lognormvariate, randint
+from random import randint
 
 board = []
 board_size = 5
 number_of_guesses = 4
 
+
 def create_board(board, size):
   for x in range(size):
     board.append(["O"] * size)
+
 
 def print_board(board):
   for row in board:
     print(" ".join(row))
 
+
 def random_row(board):
   return randint(0, len(board) - 1)
 
+
 def random_col(board):
   return randint(0, len(board[0]) - 1)
+
 
 # create the board for the game
 create_board(board, board_size)
@@ -24,6 +29,7 @@ create_board(board, board_size)
 # get random location of battleship
 ship_row = random_row(board)
 ship_col = random_col(board)
+
 
 def game_on():
   for turn in range(number_of_guesses):
@@ -48,5 +54,6 @@ def game_on():
       if turn == number_of_guesses:
         print("Game Over")
         print_board(board)
+
 
 game_on()
