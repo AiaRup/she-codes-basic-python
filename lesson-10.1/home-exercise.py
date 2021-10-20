@@ -27,7 +27,7 @@ def game_on():
     random_word = random_word + letters[randint(0, len(letters) - 1)]
   print(random_word)
   while result['bools'] < 5:
-    while len(guess) < 5:
+    while len(guess) < 5 or guess == '' or not guess.isalpha():
       guess = input('Please enter a 5 letter word:')
     result = cows_and_bulls(random_word, guess)
     print(f'Your guess results are {result}')
