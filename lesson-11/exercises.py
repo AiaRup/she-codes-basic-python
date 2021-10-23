@@ -91,6 +91,3 @@ playlist = Playlist("My Favourite Songs")
 
 for song in album.tracks:
   playlist.add_song(song)
-
-"""Exercise 4"""
-"""Exercise 5"""
