@@ -1,6 +1,6 @@
 def print_words(file_name):
   with open(file_name, "r") as text_file:
-    data = text_file. read()
+    data = text_file.read()
     result = count_word(data)
     sorted_result = sorted(result.keys())
     for i in sorted_result:
@@ -22,7 +22,7 @@ def count_word(full_text):
 
 def print_top(file_name):
   with open(file_name, "r") as text_file:
-    data = text_file. read()
+    data = text_file.read()
     result = count_word(data)
     sorted_result = [{k: v} for k, v in sorted(result.items(), key=lambda item: item[1], reverse=True)]
     for i in range(20):
